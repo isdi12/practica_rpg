@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sukamon : Character
 {
-    public Sukamon() : base("mbappe", 5, Resources.Load<Sprite>("Sprites/mbappe")) // construimos padre
+    public Sukamon() : base("mbappe", 1 , Resources.Load<Sprite>("Sprites/mbappe")) // construimos padre
     {
 
     }
