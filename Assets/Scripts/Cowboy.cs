@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Cowboy : Character
 {
-    public Cowboy(string name, float damage) : base(name, damage, Resources.Load<Sprite>("Sprites/cowboy")) // construimos padre
+    public Cowboy(string name) : base(name, 15, Resources.Load<Sprite>("Sprites/cowboy")) // construimos padre
     {
        
     }
