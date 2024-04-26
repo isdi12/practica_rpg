@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Character 
 {
-    public float health;
+    public float health = 100;
     private string _name;
     private Sprite _sprite;
     protected float damage;
@@ -35,8 +35,7 @@ public abstract class Character
     {
         Debug.Log("Character se cura");
         health = Mathf.Clamp(health, 0, 100);
-        return health;
-        
+        return health;    
     }
     public abstract float Attack();
 }

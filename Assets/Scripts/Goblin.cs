@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goblin : MonoBehaviour
+public class Goblin : Character
 {
-    // Start is called before the first frame update
-    void Start()
+    public Goblin() : base("goblin", 5, Resources.Load<Sprite>("Sprites/goblin")) // construimos padre
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    }
+    public override float Attack()
     {
-        
+        Debug.Log("Cowboy ataca");
+        if (health < 20)
+        {
+            return damage * 3;
+        }
+        else
+        {
+            return damage;
+        }
+    }
+       
+        public override float Heal()
+    {
+        float restartLife; 
+        Debug.Log("goblin se cura");
+        restartLife = damage / 2;
+        health += restartLife;
+        base.Heal();
+        return restartLife;
     }
 }
