@@ -6,6 +6,7 @@ using UnityEngine;
 public class Wizard : Character
 {
     private float damageMultiplier;
+
     public Wizard(float damageMultiplier, string name) : base(name,20,  Resources.Load<Sprite>("Sprites/wizard"))
     {
         
@@ -18,9 +19,10 @@ public class Wizard : Character
 
     public override float Heal()
     {
+        float restartLife;
         Debug.Log("wizard se cura");
-        health += Random.Range(damage, damage * damageMultiplier);
+        restartLife = Random.Range(damage, damage * damageMultiplier);
         base.Heal();
-        return Random.Range(damage, damage * damageMultiplier); 
+        return restartLife; 
     }
 }
