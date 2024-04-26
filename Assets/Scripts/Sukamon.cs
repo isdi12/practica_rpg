@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sukamon : MonoBehaviour
+public class Sukamon : Character
 {
-    // Start is called before the first frame update
-    void Start()
+    public Sukamon() : base("mbappe", 5, Resources.Load<Sprite>("Sprites/mbappe")) // construimos padre
     {
-        
+
+    }
+    public override float Attack()
+    {
+        Debug.Log("Mbappe ataca");
+        if (health < 5)
+        {
+            return 100f;
+        }
+        else
+        {
+            return damage;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public override float Heal()
     {
-        
+        float restartLife;
+        Debug.Log("Mbappe se cura");
+        restartLife = damage / 3;
+        health += restartLife;
+        base.Heal();
+        return restartLife;
     }
 }
