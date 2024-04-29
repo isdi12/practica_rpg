@@ -33,11 +33,11 @@ public class GameManager : MonoBehaviour
     public void SelectCharacter()
     {
         TMP_Dropdown dropdown = FindObjectOfType<TMP_Dropdown>();
-        if (dropdown.value == 0)
+        if (dropdown.value == 1)
         {
             character = new Cowboy (selectName);
         }
-        else if (dropdown.value == 1)
+        else if (dropdown.value == 2)
         {
             character = new Wizard (2f , selectName);
         }

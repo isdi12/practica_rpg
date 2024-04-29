@@ -14,11 +14,13 @@ public class PlayerMovement : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = 0;
+        _spriteRenderer.sprite = GameManager.instance.character.GetSprite(); 
     }
 
     // Update is called once per frame
     void Update()
     {
+        _dir=Vector2.zero; 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             _dir = new Vector2(-1, _dir.y);
