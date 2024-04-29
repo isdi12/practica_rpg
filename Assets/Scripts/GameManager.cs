@@ -35,11 +35,11 @@ public class GameManager : MonoBehaviour
         TMP_Dropdown dropdown = FindObjectOfType<TMP_Dropdown>();
         if (dropdown.value == 0)
         {
-            character = new Cowboy ("Steve");
+            character = new Cowboy (selectName);
         }
         else if (dropdown.value == 1)
         {
-            character = new Wizard (2f , "Amador");
+            character = new Wizard (2f , selectName);
         }
     }
 
