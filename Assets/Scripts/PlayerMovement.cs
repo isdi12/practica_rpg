@@ -45,4 +45,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb.velocity = new Vector2(speed, speed) * _dir;
     }
+
+    private void OnDisable()
+    {
+        _rb.velocity = Vector2.zero;   // el ondisable sirve para que al apagarse el fixedupdate se ejecute esto 
+    }
 }

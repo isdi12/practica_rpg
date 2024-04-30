@@ -34,7 +34,7 @@ public class CombatController : MonoBehaviour
         if (Input.GetKeyDown(healKey))
         {
             float vida = GameManager.instance.character.Heal();
-            character.health += vida; // para que se sume la vida
+            GameManager.instance.character.health += vida; // para que se sume la vida   
             playerDamage = 0;
         }
 
@@ -50,7 +50,7 @@ public class CombatController : MonoBehaviour
             if (num == 1)
             {
                 float vida = enemy.Heal();
-                GameManager.instance.character.health += vida;
+                enemy.health += vida;
                 enemyDamage = 0;
             }
         }

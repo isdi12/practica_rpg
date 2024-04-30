@@ -9,7 +9,7 @@ public class Wizard : Character
 
     public Wizard(float damageMultiplier, string name) : base(name,20,  Resources.Load<Sprite>("Sprites/wizard"))
     {
-        
+        this.damageMultiplier = damageMultiplier;
     }
     public override float Attack()
     {
