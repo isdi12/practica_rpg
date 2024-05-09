@@ -10,7 +10,7 @@ public class Goblin : Character
     }
     public override float Attack()
     {
-        Debug.Log("Cowboy ataca");
+        Debug.Log("goblin ataca");
         if (health < 20)
         {
             return damage * 3;

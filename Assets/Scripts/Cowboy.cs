@@ -18,7 +18,7 @@ public class Cowboy : Character
     }
     public override float Attack()
     {
-        Debug.Log("Cowboy ataca");
+        Debug.Log("Cowboy ataca " );
         return Random.Range(damage , damage * 1.5f);
     }
 }

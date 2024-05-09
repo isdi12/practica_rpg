@@ -13,8 +13,7 @@ public class Wizard : Character
     }
     public override float Attack()
     {
-        damage *= damageMultiplier; 
-        return damage;
+        return damage * damageMultiplier;
     }
 
     public override float Heal()
