@@ -30,26 +30,26 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         
     }
-    public void SelectCharacter()
+    public void SelectCharacter() // para seleccionar el personaje
     {
-        TMP_Dropdown dropdown = FindObjectOfType<TMP_Dropdown>();
-        if (dropdown.value == 1)
+        TMP_Dropdown dropdown = FindObjectOfType<TMP_Dropdown>();  // buscamos el valor del dropdown 
+        if (dropdown.value == 1) // si es 1 se crea cowboy
         {
             character = new Cowboy (selectName);
         }
-        else if (dropdown.value == 2)
+        else if (dropdown.value == 2) // si es 2 el wizard
         {
             character = new Wizard (2f , selectName);
         }
     }
 
-    public string GetName()
+    public string GetName() // para coger el nombre 
     {
         return selectName; 
     }
 
     // setter
-    public void  SetName (string selectName)
+    public void  SetName (string selectName) // para dar el nombre 
     {
         this.selectName = selectName;
     }

@@ -2,67 +2,60 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interface : MonoBehaviour
 {
 
-    public TMP_Text textComponent_playerLife, textComponent_playerInfo;
-    
-    
+    public TMP_Text textComponent_playerLife, textComponent_playerInfo, textComponent_enemyLife, textComponent_enemyInfo;
+    public Slider sliderPlayer, sliderEnemigo;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void vidaCharacter()
     {
+        textComponent_playerLife.text = "name personaje " + GameManager.instance.character.GetName() + "\n" + // enseña por pantalla el nombre y la vida del personaje
+            "vida personaje " + GameManager.instance.character.health.ToString(); 
+         
+    }
+
+    public void ataqueCharacter(float dmg)
+    {
+        textComponent_playerInfo.text = "atacar personaje " + dmg.ToString(); // enseña por pantalla el ataque del personaje
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void curarCharacter(float cura)
     {
-        
+        textComponent_playerInfo.text = "curar personaje " + cura.ToString(); // enseña por pantalla la curación del personaje
 
     }
 
-    public void vidaCharacter()  
+
+    public void vidaEnemy(Character enemy)
     {
-        textComponent_playerLife.text = "name personaje " + GameManager.instance.character.GetName()+ "\n" +
-            "vida personaje " + GameManager.instance.character.health.ToString();
-        
+        textComponent_enemyLife.text = "name enemigo " + enemy.GetName() + "\n" + "vida enemigo " + enemy.health.ToString();  // enseña por pantalla el nombre y la vida del enemigo
     }
 
-    public void ataqueCharacter(float dmg) 
+    public void ataqueEnemy(float dmg)
     {
-        textComponent_playerInfo.text = "atacar personaje " + dmg.ToString();
+        textComponent_enemyInfo.text = "atacar enemigo " + dmg; // enseña por pantalla el ataque del enemigo
 
     }
 
-    //public void curarCharacter(float cura) 
-    //{
-    //    textComponent.text = "curar personaje " + cura.ToString();
-       
-    //}
-
-    
-    //public void vidaEnemy()
-    //{
-    //    textComponent.text = "vida enemigo " + GameManager.instance.character.health.ToString();
-
-    //}
-
-    //public void ataqueEnemy()
-    //{
-    //    textComponent.text = "atacar enemigo " + GameManager.instance.character.GetDamage();
-
-    //}
-
-    //public void curarEnemy()
-    //{
-    //    textComponent.text = "curar enemigo " + GameManager.instance.character.Heal();
-
-    //}
-
-    public void nameEnemy()
+    public void curarEnemy(float cura)
     {
+        textComponent_enemyInfo.text = "curar enemigo " + cura; // enseña por pantalla la curación del enemigo
 
+
+    }
+
+    public void sliderCharacter(float time)
+    {
+        sliderPlayer.value = time; // enseña por pantalla el cooldown del personaje
+    }
+
+    public void sliderEnemy(float time)
+    {
+        sliderEnemigo.value = time; // enseña por pantalla el cooldown del enemigo
     }
 }

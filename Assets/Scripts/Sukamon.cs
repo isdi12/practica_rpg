@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sukamon : Character
 {
-    public Sukamon() : base("mbappe", 1 , Resources.Load<Sprite>("Sprites/mbappe")) // construimos padre
+    public Sukamon() : base("mbappe", 3 , Resources.Load<Sprite>("Sprites/mbappe")) // construimos padre
     {
 
     }
@@ -25,7 +25,7 @@ public class Sukamon : Character
     {
         float restartLife;
         Debug.Log("Mbappe se cura");
-        restartLife = damage / 3;
+        restartLife = damage / 3f;
         health += restartLife;
         base.Heal();
         return restartLife;

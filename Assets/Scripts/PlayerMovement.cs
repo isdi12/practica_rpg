@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _rb = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>(); 
+        _rb = GetComponent<Rigidbody2D>(); 
         _rb.gravityScale = 0;
         _spriteRenderer.sprite = GameManager.instance.character.GetSprite(); 
     }
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        _rb.velocity = new Vector2(speed, speed) * _dir;
+        _rb.velocity = new Vector2(speed, speed) * _dir; // para la velocidad 
     }
 
     private void OnDisable()
