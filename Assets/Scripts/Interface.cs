@@ -14,8 +14,8 @@ public class Interface : MonoBehaviour
     public void vidaCharacter()
     {
         textComponent_playerLife.text = "name personaje " + GameManager.instance.character.GetName() + "\n" + // enseña por pantalla el nombre y la vida del personaje
-            "vida personaje " + GameManager.instance.character.health.ToString(); 
-         
+            "vida personaje " + GameManager.instance.character.health.ToString();
+
     }
 
     public void ataqueCharacter(float dmg)

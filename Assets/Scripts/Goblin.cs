@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goblin : Character
 {
-    public Goblin() : base("goblin", 5, Resources.Load<Sprite>("Sprites/goblin")) // construimos padre
+    public Goblin() : base("goblin", 50, Resources.Load<Sprite>("Sprites/goblin")) // construimos padre
     {
 
     }
